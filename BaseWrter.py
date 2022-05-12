@@ -21,11 +21,7 @@ try:
         for phone in row["phones"]:
             phone_numbers_text += phone + "\n"
         phone_numbers_text += "}"
-    #     cursor.execute(
-    #     f'INSERT INTO organizations (org_name, adres, good_review, bad_review, phone_numbers) '
-    #     f'VALUES ("{row["org_name"]}","{row["adress"]}",{row["good_review"]},{row["bad_review"]},'
-    #     f'"{phone_numbers_text}");'
-    # )
+  
         params = (row["org_name"], row["adress"], row["good_review"], row["bad_review"])
         cursor.execute(
             'INSERT INTO organizations (org_name, adres, good_review, bad_review) '
